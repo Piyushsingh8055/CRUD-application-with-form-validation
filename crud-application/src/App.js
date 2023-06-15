@@ -3,6 +3,9 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./App.css";
 
+const statesList = [
+  "Andhra Pradesh", " Arunachal Pradesh", " Assam", " Bihar", " Chhattisgarh", " Goa", " Gujarat", " Haryana", " Himachal Pradesh", " Jammu and Kashmir", " Jharkhand", " Karnataka", " Kerala", " Lakshadweep", " Madhya Pradesh", " Maharashtra", " Manipur", " Meghalaya", " Mizoram", " Nagaland", " Odisha", " Punjab", " Rajasthan", " Sikkim", " Tamil Nadu", " Telangana", " Tripura", " Uttar Pradesh", " Uttarakhand", " West Bengal"
+];
 const App = () => {
   const [data, setData] = useState([]);
   const [name, setName] = useState("");
@@ -161,7 +164,7 @@ const App = () => {
           placeholder="Phone"
           value={phone}
           onChange={(e) => setPhone(e.target.value)}
-          className="input-field input-field-small"
+          className="input-field "
         />
 
         <input
@@ -169,21 +172,27 @@ const App = () => {
           placeholder="State"
           value={state}
           onChange={(e) => setState(e.target.value)}
-          className="input-field input-field-small"
+          className="input-field"
+          list="stateOptions"
         />
+        <datalist id="stateOptions">
+          {statesList.map((state, index) => (
+            <option key={index} value={state} />
+          ))}
+        </datalist>
 
         <input
           type="text"
           placeholder="City"
           value={city}
           onChange={(e) => setCity(e.target.value)}
-          className="input-field input-field-small"
+          className="input-field "
         />
 
         <select
           value={gender}
           onChange={(e) => setGender(e.target.value)}
-          className="input-field input-field-small"
+          className="input-fieldg "
         >
           <option value="">Select Gender</option>
           <option value="Male">Male</option>
@@ -196,7 +205,7 @@ const App = () => {
             selected={dob}
             onChange={(date) => setDob(date)}
             dateFormat="yyyy-MM-dd"
-            placeholderText="Date of Birth"
+            placeholderText=  " Date of Birth"
           />
         </div>
         <br />
@@ -205,7 +214,7 @@ const App = () => {
           {editMode ? "Update" : "Add Profile"}
         </button>
       </form>
-
+<h3> <u>Profiles </u></h3>
       <table className="user-table">
         <thead>
           <tr>

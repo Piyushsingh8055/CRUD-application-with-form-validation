@@ -1,3 +1,8 @@
+body {
+  background-color: #fff8f8;
+}
+
+
 .user-table {
   width: 100%;
   border-collapse: collapse;
@@ -7,7 +12,7 @@
 .user-table th,
 .user-table td {
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid #c19f98;
 }
 
 .user-table th {
@@ -28,7 +33,7 @@
 }
 
 .user-table button:hover {
-  background-color: #45a049;
+  background-color: #289e2d;
 }
 
 
@@ -36,9 +41,19 @@
 .input-field {
   padding: 10px;
   margin-bottom: 25px;
-  margin-left: 50px;
+  margin-left: 60px;
   width: 40%;
-  border: 2px solid #541414;
+  border: 1px solid #c19f98;
+  border-radius: 10px;
+  font-size: 15px;
+}
+.input-fieldg {
+  padding: 10px;
+  /* color: #8e8989; */
+  margin-bottom: 25px;
+  margin-left: 60px;
+  width: 42%;
+  border: 1px solid #c19f98;
   border-radius: 10px;
   font-size: 15px;
 }
@@ -46,7 +61,7 @@
 .submit-button {
   
   margin-bottom: 25px;
-  margin-left: 50px;
+  margin-left: 650px;
   padding: 10px 20px;
   background-color: #2a77ba;
   color: #fff;
